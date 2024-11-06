@@ -55,9 +55,7 @@ openButton.addEventListener("click", openingMessage);
 const closeButton = document.querySelector("#close");
 
 const closeMessage = () => {
-    // inbox.classList.remove("is-read");
     inboxMessage.classList.add("hidden");
-    // markUnreadButton.classList.add("hidden");
 }
 
 closeButton.addEventListener("click", closeMessage);
