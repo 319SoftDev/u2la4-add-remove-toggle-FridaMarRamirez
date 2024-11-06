@@ -36,3 +36,28 @@ const closeReplyMessage = () => {
 
 sendButton.addEventListener("click", closeReplyMessage);
 cancelButton.addEventListener("click", closeReplyMessage);
+
+// opening the inbox message
+const openButton = document.querySelector("#open-button");
+const inbox = document.querySelector("#inbox");
+const inboxMessage = document.querySelector("#inbox-message");
+const markUnreadButton = document.querySelector("#mark-button");
+
+const openingMessage = () =>{
+    inbox.classList.add("is-read");
+    inboxMessage.classList.remove("hidden");
+    markUnreadButton.classList.remove("hidden");
+}
+
+openButton.addEventListener("click", openingMessage);
+
+// closing the inbox message
+const closeButton = document.querySelector("#close");
+
+const closeMessage = () => {
+    // inbox.classList.remove("is-read");
+    inboxMessage.classList.add("hidden");
+    // markUnreadButton.classList.add("hidden");
+}
+
+closeButton.addEventListener("click", closeMessage);
